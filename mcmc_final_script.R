@@ -10,7 +10,7 @@ library(mcmc)
 library(SimTools)
 library(mcmcplots)
 library(mcmcse)
-library(R2jags)
+#library(R2jags)
 
 ##################################################################
 # Simulate data for use below
@@ -85,7 +85,7 @@ log_det_hess_null <- log(abs(hess_null_hat)) # -6.785136
 
 # Compute LA based on expansion
 log_LA_null <- lupost_null(theta = gamma_hat) + (1/2)*log(2*pi) + 
-  (1/2)*log_det_hess_alt - (1/2) * K # -2711.441
+  (1/2)*log_det_hess_alt - (1/2) * K # -2711.441 # MOVE DOWN
 
 ##################################################################
 # Laplace Approximation: Model m2 (full model)
